@@ -35,6 +35,16 @@ public class LinkedList {
         }
     }
 
+    public int getSize() {
+        int size = 0;
+        Node current = head;
+        while (current != null) {
+            size++;
+            current = current.address;
+        }
+        return size;
+    }
+
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
 
@@ -44,5 +54,6 @@ public class LinkedList {
         list.add(4);
 
         list.printList();
+        System.out.println("Size of list: " + list.getSize());
     }
 }
